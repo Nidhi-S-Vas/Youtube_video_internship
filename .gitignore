@@ -1,0 +1,12 @@
+# Ignore downloaded videos
+input_video/
+
+# Ignore extracted audio files
+extracted_audio/
+
+# Ignore preprocessed audio files
+preprocessed_audio/
+
+# Python cache
+__pycache__/
+*.pyc
