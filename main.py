@@ -10,14 +10,14 @@ os.makedirs(VIDEO_DIR, exist_ok=True)
 os.makedirs(AUDIO_DIR, exist_ok=True)
 os.makedirs(CLEAN_AUDIO_DIR, exist_ok=True)
 
-#  Step 1: Input YouTube URL 
+#   Input YouTube URL 
 youtube_url = "https://youtu.be/BqSxjmvXzzY?si=SegyoUOya3gFZC8g"
 
 video_path = os.path.join(VIDEO_DIR, "video.mp4")
 raw_audio_path = os.path.join(AUDIO_DIR, "raw_audio.wav")
 clean_audio_path = os.path.join(CLEAN_AUDIO_DIR, "clean_audio.wav")
 
-#  Step 2: Download Video 
+#   Download Video 
 print("Downloading video...")
 subprocess.run([
     "yt-dlp",
@@ -27,7 +27,7 @@ subprocess.run([
 ], check=True)
 print("Video downloaded successfully.")
 
-#  Step 3: Extract Audio 
+#  Extract Audio 
 print("Extracting audio...")
 subprocess.run([
     "ffmpeg",
@@ -37,7 +37,7 @@ subprocess.run([
 ], check=True)
 print("Audio extracted successfully.")
 
-#  Step 4: Audio Preprocessing 
+#  Audio Preprocessing 
 # Convert to mono and set sample rate to 16kHz
 print("Preprocessing audio...")
 subprocess.run([
